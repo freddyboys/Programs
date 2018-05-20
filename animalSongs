@@ -1,0 +1,100 @@
+package animalsongs;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+/**
+ *
+ * @author fp
+ */
+public class AnimalSongs {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+
+        List<String> frog = new ArrayList<>();
+        List<String> dragonfly = new ArrayList<>();
+        List<String> criket = new ArrayList<>();
+
+        //Songs
+/*
+brr, fiu, cric-cric, brrah
+pep, birip, trri-trri, croac
+bri-bri, plop, cric-cric, brrah*/
+        List<String> song1 = new ArrayList<>();
+        List<String> song2 = new ArrayList<>();
+       
+        List<String> song3 = new ArrayList<>();
+        
+   
+        
+        
+        
+        Integer max=9, min=0;
+        Random random=new Random();
+        Integer b=random.nextInt((max-min) +1) +min;
+        
+       
+
+        frog.add("brr");
+        frog.add("birip");
+        frog.add("brrah");
+        frog.add("croac");
+
+        dragonfly.add("fiu");
+        dragonfly.add("plop");
+        dragonfly.add("pep");
+
+        criket.add("cric-cric");
+        criket.add("trri-trri");
+        criket.add("bri-bri");
+        
+        
+        
+        song1.add("brr");
+        song1.add("fiu");
+        song1.add("cric-cric");
+        song1.add("brrah");
+        
+        song2.add("pep");
+        song2.add("birip");
+        song2.add("trri-trri");
+        song2.add("croac");
+        
+        song3.add("bri-bri");
+        song3.add("plop");
+        song3.add("cric-cric");
+        song3.add("brrah");
+        
+        
+              List<String> allSound = new ArrayList<>();
+              allSound.addAll(frog);
+              allSound.addAll(dragonfly);
+              allSound.addAll(criket);
+            String palabra = allSound.get(b);
+            System.out.println("Given word: "+palabra);
+              for (int j = 0; j <= 3; j++) {
+            
+            
+                  if (palabra == song1.get(j)) {
+                for (int h = j+1; h <= song1.size() - 1; h++) {
+                System.out.println(song1.get(h));
+                }
+            } else if (palabra == song2.get(j)){
+                for (int k = j+1; k <= song2.size() - 1; k++) {
+                System.out.println(song2.get(k));
+                }
+            }else if (palabra == song3.get(j)){
+                for (int l = j+1; l <= song3.size() - 1; l++) {
+                System.out.println(song3.get(l));
+                }
+            }else{         
+            }
+              }
+    }
+
+}
